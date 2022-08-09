@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Hello! I am Chirag. I am a front-end web developer. This is my portfolio website.">
+    <meta name="keywords" content="Chirag, Chirag Portfolio, Portfolio, Chirag Resume, Seneca College">
+    <meta name="author" content="Chirag">
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Chirag</title>
+</head>
+
+<body>
+    <!-- navigation menu  -->
+    <nav class="nav">
+        <div class="title">Chirag</div>
+        <a href="#" id="menuIco"><i class="material-icons nav-icon" id="menuIcon">menu</i></a>
+        <ul class="navbar navbarToggle">
+            <li class="nav-item">
+                <a href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#aboutme">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contactme">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- landing area -->
+    <section class="container vertical-align">
+        <div class="landing" id="home">
+            <img src="./images/avatar.jpeg" class="avatar" width="80" alt="Avatar">
+            <p>Hola! My name is <strong>Chirag</strong>. I am a Web Developer, Software Engineer. I am currently
+                studying in <strong>Seneca College</strong>.</p>
+            <div class="btn-group">
+                <a href="./files/resume.docx" class="btn btn-light btn-round"><i class="material-icons"
+                        class="alignFix">file_download</i>Resume</a>
+                <a href="#contactme" class="btn btn-dark btn-round"><i class="material-icons"
+                        class="alignFix">person</i>Contact
+                    Me</a>
+            </div>
+        </div>
+    </section>
+    <!-- about me section  -->
+    <section class="container" id="aboutme">
+        <div class="col-8">
+            <h1 class="text-red">Academic Honesty</h1>
+            <p>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of
+                this assessment has been copied manually or electronically from any other source (including web sites)
+                except for the information supplied by the WEB222 instructors and / or made available in this assessment
+                for my use. I also declare that no part of this assignment has been distributed to other students.</p>
+            <strong class="text-red">Date:
+                <!-- dynamically render date with javascript -->
+            </strong> <span id="freshDate">August 08, 2022</span>
+        </div>
+        <div class="col-4 pt0">
+            <h1 class="text-red">Basic Information</h1>
+            <table class="basic-information">
+                <tr>
+                    <td><b>Age:</b></td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td><b>Email: </b></td>
+                    <td>chirag@myseneca.ca</td>
+                </tr>
+                <tr>
+                    <td><b>Language:</b></td>
+                    <td>Hindi, Punjabi and English</td>
+                </tr>
+                <tr>
+                    <td><b>Class Section:</b></td>
+                    <td>NEE</td>
+                </tr>
+                <tr>
+                    <td><b>Student Id:</b></td>
+                    <td>111235214</td>
+                </tr>
+                <tr>
+                    <td><b>Instructor:</b></td>
+                    <td>NOMAN ATIQUE</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="container" id="education">
+        <h1 class="text-red">Education</h1>
+        <div class="card">
+            <div class="card-left-portion">
+                <p>2018 - 2020</p>
+                <h3>Pre Engineering</h3>
+            </div>
+            <div class="card-right-portion">
+                <h1>Pre Engineering</h1>
+                <h3>DYAL SINGH PUBLIC SCHOOL</h3>
+
+                <p>Event Management Head at Sports Committee.</p>
+                <p>Participated in co curricular activities in college.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-left-portion">
+                <p>2021 - Present</p>
+                <h3>Bachelor's Degree</h3>
+            </div>
+            <div class="card-right-portion">
+                <h1>Bachelor's Degree</h1>
+                <h3>SENECA COLLEGE</h3>
+
+                <p>Studying Computer Science from the Seneca College</p>
+                <p>Participating in co curricular activities in college.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="contactme">
+        <h1 class="text-red">Contact Me</h1>
+        <form action="https://httpbin.org/post" class="contactForm" method="post">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="20" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input list="cities" name="city" id="city" required>
+                <datalist id="cities">
+                    <option value="Toronto">
+                    <option value="Ottawa">
+                    <option value="Vancouver">
+                    <option value="Montreal">
+                    <option value="Victoria">
+                    <option value="Halifax">
+                    <option value="Calgary">
+                    <option value="Edmonton">
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+
+                <input type="text" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$"
+                    name="postalCode" id="postalCode" title="Please enter valid Canadian Postal Code" required>
+
+            </div>
+            <div class="form-group"> <label>Choose One</label>
+                <div>
+                    <input type="radio" class="radioBtn" name="purpose" id="Comment" value="Comment" checked>
+                    <label for="Comment">Comment</label>
+                </div>
+                <div>
+                    <input type="radio" class="radioBtn" name="purpose" id="Question" value="Question">
+
+                    <label for="Question">Question</label>
+                </div>
+                <div>
+                    <input type="radio" class="radioBtn" name="purpose" id="Hiring" value="Hiring">
+
+                    <label for="Hiring">Hiring</label>
+                </div>
+                <div class="hourlyRate" id="hideBlock">
+                    Specify Hourly Rate
+                    <input type="number" id="hourlyRate" placeholder="20"> $
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="40" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="source">How did you hear about me?</label>
+
+                <select name="source" id="source">
+                    <option value="socialmedia">Social Media</option>
+                    <option value="friend">My Friend</option>
+                    <option value="College">College</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn-submit">
+            </div>
+
+
+        </form>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="contactTray">
+            <a href="mailto:chirag@myseneca.ca"><i class="material-icons">email</i></a>
+            <a href="tel:+1111235214"><i class="material-icons">local_phone</i></a>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
